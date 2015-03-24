@@ -673,13 +673,16 @@ input[type=search],
 	vertical-align: middle;
 }
 
-.signupform fieldset {
+.signupform fieldset,
+.blog-search-form,
+.productlist-search {
 	label {
 		text-indent: -300px;
 		height: 0;
 		overflow: hidden;
 	}
-	input[type=email] {
+	input[type=email],
+	input[type=search] {
 		margin-right: 5px;
 	}
 }
@@ -889,8 +892,6 @@ input[type="search"]::-webkit-search-decoration {
 	.content-wrapper {
 		background-color: fade(@color-swatch1,40%);
 		text-shadow: none;
-		padding-left: 16px;
-		padding-bottom: 28px;
 		.title {
 			font-weight: @font-swatch3-font-weight;
 			&:after {
@@ -899,8 +900,9 @@ input[type="search"]::-webkit-search-decoration {
 		}
 		.title, .description {
 			color: @color-swatch1;
-			display: inline;
+			display: inline-block;
 			padding-right: 0;
+			padding: 20px 0px 20px 20px;
 		}
 		.title {
 			padding-right: 0;
