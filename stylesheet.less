@@ -684,6 +684,10 @@ input[type=search],
 	input[type=email],
 	input[type=search] {
 		margin-right: 5px;
+
+		// Fix for iOS devices
+	    -webkit-appearance: none;
+	    border-radius: 0;
 	}
 }
 
@@ -993,7 +997,7 @@ input[type="search"]::-webkit-search-decoration {
 	padding: 0;
 }
 .menu-subsection-promoted, .menu-item-promoted, .blog-post-metadata {
-	background-color: @background-blocks;
+	background-color: darken(@color-swatch1,3%);
 }
 .menu-item-promoted .inner-item,
 .menu-subsection-wrapper {
@@ -1043,6 +1047,7 @@ input[type="search"]::-webkit-search-decoration {
 	margin-top: 10px;
 	.btn {
 		margin-right: 10px;
+		margin-bottom: 15px;
 	}
 }
 
@@ -1737,6 +1742,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .template-footer .widget.profile .bk-profile-socialicons span {
 	margin-right: 5px;
+	margin-bottom: 15px;
 	a, a:hover {
 		background-color: transparent;
 		margin: 0;
@@ -1894,7 +1900,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Mobile
-@media @mobile {
+@media @tablet {
 	.widget.clicktocall a {
 		box-shadow: 5px 5px @color-swatch3;
 		&:hover {
